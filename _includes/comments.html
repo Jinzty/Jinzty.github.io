@@ -44,3 +44,20 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
+
+{% if site.gitment_shortname %}
+<div id="gitment_thread"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        owner: '{{site.gitment_shortname}}',
+        repo: '{{site.url}}',
+        oauth: {
+            client_id: '{{site.gitment_client_id}}',
+            client_secret: '{{site.gitment_client_secret}}',
+        },
+    });
+    gitment.render('gitment_thread');
+</script>
+{% endif %}
