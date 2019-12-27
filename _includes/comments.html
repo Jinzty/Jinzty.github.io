@@ -45,13 +45,14 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
 
-{% if site.gitment_shortname %}
+{% if site.gitment_owner %}
 <div id="gitment_thread"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        owner: '{{site.gitment_shortname}}',
+        id: md5(window.location.pathname.replace(/index.html/, "")),
+        owner: '{{site.gitment_owner}}',
         repo: '{{site.gitment_repo}}',
         oauth: {
             client_id: '{{site.gitment_client_id}}',
