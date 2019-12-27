@@ -51,7 +51,6 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        id: md5(window.location.pathname.replace(/index.html/, "")),
         owner: '{{site.gitment_owner}}',
         repo: '{{site.gitment_repo}}',
         oauth: {
