@@ -30,10 +30,10 @@ description_footer: 爱折腾！
 # 两种评论插件，选一个就好了，使用自己的 short_name
 duoshuo_shortname:
 disqus_shortname:
-gitment_owner: Jinzty
-gitment_repo: Jinzty.github.io
-gitment_client_id: a73ef197271b58814591
-gitment_client_secret: cf578fa9b126d427506a125ffe3c61c28ce33de8
+gitalk_owner: Jinzty
+gitalk_repo: Jinzty.github.io
+gitalk_client_id: a73ef197271b58814591
+gitalk_client_secret: cf578fa9b126d427506a125ffe3c61c28ce33de8
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
