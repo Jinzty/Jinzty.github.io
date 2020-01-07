@@ -9,7 +9,7 @@
             应用服务器消费授权码CODE去wx请求令牌，取回OPENID放入session，userId对应的用户信息返回给客户端展示
             wx客户端确认用户信息并选择绑定，则服务器从session中取出OPENID和userId并更新关联表做绑定处理
 
-扫码登录
+扫码登录（非公众号，wx开放平台注册网站应用）
     登录地址跳转至（或者js嵌入）临时登录二维码页面
         应用服务器生成uuid放入session
         跳转https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect
@@ -18,8 +18,8 @@
             应用服务器取session中取uuid，取不到则失效警告，uuid和sessionId计算签名值与请求中的状态值比较，不一致则验签失败
             应用服务器消费授权码CODE去wx请求令牌，取回OPENID并根据关联表做登录处理
 
-扫码登录test（snsapi_login测试公众号不一定有操作权限）
-    同扫码绑定实现方式SCOPE改snsapi_base用snsapi_userinfo，回调地址改用登录回调，授权后直接回改缓存中状态并消费CODE取回OPENID及对应的userId放入缓存
+扫码登录test（测试公众号没有snsapi_login的SCOPE权限）
+    同扫码绑定实现方式，回调地址改用登录回调，授权后直接回改缓存中状态并消费CODE取回OPENID及对应的userId放入缓存
     页面提供扫码页后定时轮询key状态(或websocket通知)，若扫码授权通过并能从缓存取到userId则登录处理，否则同步展示key状态直到失效刷新二维码
 
 https://github.com/Jinzty/wx-demo
