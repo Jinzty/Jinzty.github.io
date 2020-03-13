@@ -22,4 +22,7 @@
     同扫码绑定实现方式，回调地址改用登录回调，授权后直接回改缓存中状态并消费CODE取回OPENID及对应的userId放入缓存
     页面提供扫码页后定时轮询key状态(或websocket通知)，若扫码授权通过并能从缓存取到userId则登录处理，否则同步展示key状态直到失效刷新二维码
 
+扫码登录ws
+    同扫码登录test方式，前端根据uuid建立ws连接并保存关联，后台在被回调的时候通知ws对应的前端跳转登录
+
 https://github.com/Jinzty/wx-demo
