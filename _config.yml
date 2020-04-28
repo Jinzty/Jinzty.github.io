@@ -33,7 +33,7 @@ disqus_shortname:
 gitalk_owner: Jinzty
 gitalk_repo: Jinzty.github.io
 gitalk_client_id: a73ef197271b58814591
-gitalk_client_secret: cf578fa9b126d427506a125ffe3c61c28ce33de8
+gitalk_client_secret: c22d15b4eb996742d4ce1bfbebe3b9aa13bbbde7
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
