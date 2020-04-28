@@ -65,6 +65,7 @@
 {% if site.gitalk_owner %}
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://github.com/blueimp/JavaScript-MD5/blob/master/js/md5.min.js"></srcipt>
 <div id="gitalk_thread"></div>
 <script type="text/javascript">
     var gitalk = new Gitalk({
@@ -73,7 +74,7 @@
         repo: '{{site.gitalk_repo}}',
         owner: '{{site.gitalk_owner}}',
         admin: ['{{site.gitalk_owner}}'],
-        id:decodeURI(window.location.pathname),
+        id: md5(location.pathname),
     });
     gitalk.render('gitalk_thread');
 </script>
