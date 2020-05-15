@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "使用VScode的Remote-Containers远程连接docker开发"
+categories: Remote-Containers
+tags: VScode docker
+author: Jinzty
+---
 <h1>配置docker环境</h1>
 
 有的话直接可以跳过，最好有个远程机器上部署了docker。如果没有docker环境，在win下使用boot2docker镜像虚拟机快速搭建
