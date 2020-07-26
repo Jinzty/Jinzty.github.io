@@ -1,0 +1,5 @@
+系统间使用Spring Cloud Feign（声明性REST客户端）简化调用，但是按常规的使用方法不好跟踪代码
+在上层定义一层接口（其方法直接定义好@PostMapping等）
+服务方实现该接口并注解@RestController
+调用方继承该接口并使用@FeignClient配置fallbackFactory支持Hystrix断路器处理，支持Ribbon的负载均衡
+如此可在idea跟踪代码结构来跳到实现，接口发生变化两端需要调整的也更显眼，避免修改错漏
